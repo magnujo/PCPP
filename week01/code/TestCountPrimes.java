@@ -5,7 +5,7 @@
 
 public class TestCountPrimes {
   public static void main(String[] args) {
-    final int range = 100_000_000;
+    final int range = 1000_000_000;
 		long start = System.nanoTime();
     /*System.out.printf("Sequential result: %10d in: %10d%n", countSequential(range), (System.nanoTime()-start)/1_000_000);
 		start = System.nanoTime();
@@ -19,8 +19,8 @@ public class TestCountPrimes {
     System.out.printf("Parallel12 result: %10d in: %10d%n", countParallelN(range, 12), (System.nanoTime()-start)/1_000_000);
 		start = System.nanoTime();
 		System.out.printf("Parallel6  result: %10d in: %10d%n", countParallelN(range, 6), (System.nanoTime()-start)/1_000_000);
-		start = System.nanoTime();
-    System.out.printf("Parallel2  result: %10d in: %10d%n", countParallel2(range/2), (System.nanoTime()-start)/1_000_000);
+		/*start = System.nanoTime();
+    System.out.printf("Parallel2  result: %10d in: %10d%n", countParallel2(range/2), (System.nanoTime()-start)/1_000_000);*/
 		}
 
   private static boolean isPrime(int n) {

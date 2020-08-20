@@ -41,8 +41,9 @@ class: center, middle
 
 # The teachers
 * Course responsible: Kasper Østerbye
-* PhD 1989, Aalborg University
-* Programming languages and software understanding
+* PhD 1989, Aalborg University, programmed my first machine code in 1978 (wrote an assembler)
+* Research interests: Programming languages and software understanding
+	* Like programming languages: Java, C#, Kotlin, JavaScript, Lisp, Python, C++, Smalltalk, Forth, Icon, Prolog, Simula, Pascal, Concurrent Pascal, Beta, Eiffel, ... (excuse me for mixing syntaxes once in a while).
 * Joined ITU in 2000 (but has been away for 5 years) 
 * Co-teacher: Jørgen Staunstrup (will introduce himself later in the course)
 
@@ -234,6 +235,57 @@ Press Enter to get the current value:
 ### (and communicating via object)
 
 <img src="img/sequenceDia1.jpg" alt="drawing" style="width:80%;"/>
+
+---
+
+# How to do concurrency I - (*all* corners cut!)
+At its heart a CPU does this:
+```
+int PC = start_address;
+while (power_on){
+	inst = memory[PC++];
+	switch (op_code( instr )) {
+		case ADD: stack[top] += val(inst); break;
+		case JMP: PC = addr(inst); break;
+		...
+	}
+}
+```
+
+---
+
+# How to do concurrency II - (*all* corners cut!)
+For concurrency, it does this:
+```
+int PC = start_address;
+int slice = 50;
+while (power_on){
+	inst = memory[PC++];
+	switch (op_code( instr )) {
+		case ADD: ...; break;
+		case JMP: PC = addr(inst); break;
+		...
+	}
+	if (slice-- == 0) {
+		// save currrent PC, stack pointer, top, etc into list of acticve processes
+		// load other process
+		slice = 50;
+	}
+}
+```
+--
+
+* A computer with more than N cores, has N such programs
+* The cores run in _parallel_, while each core runs several threads _concurrently_
+* Each core has its own stack, PC, registers etc.
+* All cores share memory
+
+---
+# Java virtual machine (JVM)
+* Maps each java thread onto a operating system thread
+* Java can run as many threads in parallel as there is cores on the computer
+* Java compiles all bytecode to native instructions of the computer.
+	* Many problems (and advantages) of native threads/processes shows in Java.
 
 ---
 
@@ -491,7 +543,7 @@ Why do we use `final`?
 ```java
 // Does NOT work
 public static void main(String[] args) {
-  IntSupplier myLambda = incrementer(10);
+  IntSupplier myLambda = incrementer(10); // IntSupplier is the type of ()->int
 	System.out.println("First value: " + myLambda );
 	System.out.println("Second value: " + myLambda );
 }

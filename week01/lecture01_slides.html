@@ -41,9 +41,8 @@ class: center, middle
 
 # The teachers
 * Course responsible: Kasper Østerbye
-* PhD 1989, Aalborg University, programmed my first machine code in 1978 (wrote an assembler)
-* Research interests: Programming languages and software understanding
-	* Like programming languages: Java, C#, Kotlin, JavaScript, Lisp, Python, C++, Smalltalk, Forth, Icon, Prolog, Simula, Pascal, Concurrent Pascal, Beta, Eiffel, ... (excuse me for mixing syntaxes once in a while).
+* PhD 1989, Aalborg University
+* Programming languages and software understanding
 * Joined ITU in 2000 (but has been away for 5 years) 
 * Co-teacher: Jørgen Staunstrup (will introduce himself later in the course)
 
@@ -238,57 +237,6 @@ Press Enter to get the current value:
 
 ---
 
-# How to do concurrency I - (*all* corners cut!)
-At its heart a CPU does this:
-```
-int PC = start_address;
-while (power_on){
-	inst = memory[PC++];
-	switch (op_code( instr )) {
-		case ADD: stack[top] += val(inst); break;
-		case JMP: PC = addr(inst); break;
-		...
-	}
-}
-```
-
----
-
-# How to do concurrency II - (*all* corners cut!)
-For concurrency, it does this:
-```
-int PC = start_address;
-int slice = 50;
-while (power_on){
-	inst = memory[PC++];
-	switch (op_code( instr )) {
-		case ADD: ...; break;
-		case JMP: PC = addr(inst); break;
-		...
-	}
-	if (slice-- == 0) {
-		// save currrent PC, stack pointer, top, etc into list of acticve processes
-		// load other process
-		slice = 50;
-	}
-}
-```
---
-
-* A computer with more than N cores, has N such programs
-* The cores run in _parallel_, while each core runs several threads _concurrently_
-* Each core has its own stack, PC, registers etc.
-* All cores share memory
-
----
-# Java virtual machine (JVM)
-* Maps each java thread onto a operating system thread
-* Java can run as many threads in parallel as there is cores on the computer
-* Java compiles all bytecode to native instructions of the computer.
-	* Many problems (and advantages) of native threads/processes shows in Java.
-
----
-
 # Java lambda expressions
 Instead of anonymous inner classes:
 ```java
@@ -319,19 +267,18 @@ _Notice: This door does not lock anything. _
 However, you can use locks to establish conventions for access to resources.
 
 ---
+background-image: url(img/DoorClosed_dimmed.jpg)
  
-# Locks and the synchronized statement 
-
-Any Java object (door) can be used for locking 
-
+# Locks and the synchronized statement
+Any Java object (door) can be used for locking
 
 The synchronized statement
 ```java
 	synchronized (obj) {
 		... body ... }
 ```
-- Blocks until the lock on obj is available (door is open)
-- Takes (_acquires_) the lock on obj
+- Blocks until the lock on obj is available 
+- Takes (acquires) the lock on obj
 - Executes the body block
 - Releases the lock, also on return or exception (if the body is not run to its end)
 
@@ -340,8 +287,7 @@ By consistently locking on the same object
 - at most one thread can execute the code at a time
 ---
 
-# A synchronized method 
-### locks the `this`	 reference around body
+# A synchronized method locks the “this” reference around body
 A synchronized instance method
 ```java
 class C {
@@ -538,24 +484,14 @@ Same code twice, bad practice
 * Q: What if we want to use 10 threads?
 
 ---
-# A side remark
+# A side remark - on `final`
 Why do we use `final`?
+
+Consider this piece of code (pseudo java):
 ```java
-// Does NOT work
-public static void main(String[] args) {
-  IntSupplier myLambda = incrementer(10); // IntSupplier is the type of ()->int
-	System.out.println("First value: " + myLambda );
-	System.out.println("Second value: " + myLambda );
+()->int( incrementFrom(int start){
+	return () -> {++start};
 }
-
-private static IntSupplier incrementer(int start){
-	return ()->start++;
-} // LambdaFail.java
-```
-* If `Java` did not prevent this, the parameter start would outlive the invocation of the method call.
-* Java has a strict stack policy, disallowing lambda expressions to refer to non-final local variables
-
-Thus, `final` is not specific to concurrency, but often used in our examples as we build threads using lambda expressions
 
 ---
 
@@ -579,7 +515,6 @@ Takes 1.8 sec real time with threadCount 10
 - Approx 3.3 times faster than sequential solution
 - Q: Why not 4 times, or 10 times faster?
 
-
 ---
 
 # Reflections: threads for performance
@@ -599,7 +534,7 @@ Takes 1.8 sec real time with threadCount 10
     <script src="https://remarkjs.com/downloads/remark-latest.min.js">
     </script>
     <script>
-			var slideshow = remark.create();
+      var slideshow = remark.create();
     </script>
   </body>
 </html>

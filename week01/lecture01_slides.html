@@ -240,7 +240,7 @@ Press Enter to get the current value:
 
 # How to do concurrency I - (*all* corners cut!)
 At its heart a CPU does this:
-```
+```java
 int PC = start_address;
 while (power_on){
 	inst = memory[PC++];
@@ -256,7 +256,7 @@ while (power_on){
 
 # How to do concurrency II - (*all* corners cut!)
 For concurrency, it does this:
-```
+```java
 int PC = start_address;
 int slice = 50;
 while (power_on){
@@ -283,7 +283,7 @@ while (power_on){
 ---
 # Java virtual machine (JVM)
 * Maps each java thread onto a operating system thread
-* Java can run as many threads in parallel as there is cores on the computer
+* Java can run as many threads in parallel as there are cores on the computer
 * Java compiles all bytecode to native instructions of the computer.
 	* Many problems (and advantages) of native threads/processes shows in Java.
 

@@ -269,6 +269,7 @@ while (power_on){
 * Each core has its own stack, PC, registers etc.
 * All cores share memory
 
+
 ---
 # Java virtual machine (JVM)
 * Maps each java thread onto a operating system thread
@@ -546,6 +547,12 @@ for (int t=0; t < threadCount; t++) threads[t].start();
 Takes 1.8 sec real time with threadCount 10
 - Approx 3.3 times faster than sequential solution
 - Q: Why not 4 times, or 10 times faster?
+
+---
+# Thread states 
+<img src="img/ThreadStates.jpg" width="80%">
+
+*Taken from https://bitstechnotes.wordpress.com/2017/12/16/java-thread-state-diagram/*
 
 ---
 

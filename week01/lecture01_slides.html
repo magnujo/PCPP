@@ -57,11 +57,12 @@ class: center, middle
 	* Think of the atrium lifts: lifts move, buttons are pressed 
 	* Think of handling a million online banking customers
 * For performance
-* To share ressources (think virtual machines)
+* To share ressources (think virtual machines, sharing a printer, sharing a harddisk)
 
 ### It is easy, and disastrous, to get it wrong
 * Testing is even harder than for sequential code
-* You should learn how to make correct parallel code * in a real language, used in practice
+* You should learn how to make correct parallel code 
+* in a real language, used in practice
 * You should learn how to make fast parallel code
 * and measure whether one solution is faster than another * and understand why
 ---
@@ -73,7 +74,8 @@ class: center, middle
 * Tasks, the Java executor framework
 * Safety, liveness, deadlocks
 * Testing concurrent programs
-* Some more advanced concepts from Java and other languages
+* Some more advanced concepts from Java and other languages (GO or Kotlin)
+
 ---
 
 # Learning objectives
@@ -94,9 +96,12 @@ class: center, middle
 - feedback on Thursdays (zoom)
 * Exercise hand-in: Thursday morning by 7
 * On LearnIT, as a link to your itu github with solutions
+
+### See the google sheet linked from this weeks readme file
 ---
 
 # Course information online
+### See recording from yesterday
 * Course LearnIT page, restricted access:
 https://learnit.itu.dk/course/view.php?id=3017108
 * Course gitrepo, public access:
@@ -109,6 +114,7 @@ https://github.itu.dk/kasper/PCPP-Public
 ---
 
 # Exercises
+### See recording from yesterday
 * There are 13 sets of weekly exercises
 * You are expected to work in groups of 2-3 students, and in teams of two groups.
 * Hand in the solutions through LearnIT
@@ -126,10 +132,11 @@ https://github.itu.dk/kasper/PCPP-Public
 * Expected exam workload is 16 hours - Individual exam, no collaboration
 	- All materials, including Internet, allowed - Always credit the sources you use
 	- Plagiarism is forbidden - as always
-* The old exams are on the public homepage (or will soon be)
+* The old exams are on the public homepage (or will be as we get closer to exam)
 ---
 
 # Stuff you need
+### See recording from yesterday
 * Buy Goetz et al: Java Concurrency in Practice - From 2006, still the best on Java concurrency
 	- Most contents is relevant for C#/.NET too
 * Free lecture notes and papers, see homepage 
@@ -226,6 +233,8 @@ Press Enter to get the current value:
 <img src="img/sequenceDia1.jpg" alt="drawing" style="width:80%;"/>
 
 ---
+# Break
+---
 
 # How to do concurrency I - (*all* corners cut!)
 At its heart a CPU does this:
@@ -276,6 +285,12 @@ while (power_on){
 * Java can run as many threads in parallel as there are cores on the computer
 * Java compiles all bytecode to native instructions of the computer.
 	* Many problems (and advantages) of native threads/processes shows in Java.
+	
+---
+# Thread states 
+<img src="img/ThreadStates.jpg" width="80%">
+
+*Taken from https://bitstechnotes.wordpress.com/2017/12/16/java-thread-state-diagram/*
 
 ---
 
@@ -480,7 +495,8 @@ Locking can achieve mutual exclusion
 – Unfortunately, quite easy to get it wrong
 
 ---
-
+# Break (maybe)
+---
 # Using threads for performance 
 ### Example: Count primes 2 3 5 7 11 ...
 Count primes in 0...9999999:
@@ -548,11 +564,7 @@ Takes 1.8 sec real time with threadCount 10
 - Approx 3.3 times faster than sequential solution
 - Q: Why not 4 times, or 10 times faster?
 
----
-# Thread states 
-<img src="img/ThreadStates.jpg" width="80%">
 
-*Taken from https://bitstechnotes.wordpress.com/2017/12/16/java-thread-state-diagram/*
 
 ---
 

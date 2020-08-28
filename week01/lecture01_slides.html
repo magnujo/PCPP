@@ -47,6 +47,7 @@ class: center, middle
 	* Like programming languages: Java, C#, Kotlin, JavaScript, Lisp, Python, C++, Smalltalk, Forth, Icon, Prolog, Simula, Pascal, Concurrent Pascal, Beta, Eiffel, ... (excuse me for mixing syntaxes once in a while).
 * Joined ITU in 2000 (but has been away for 5 years) 
 * Co-teacher: Jørgen Staunstrup (will introduce himself later in the course)
+* Teaching Assistants: Amund Ranheim Lome, Frederik Haagensen, and Holger Stadel Borum
 
 ---
 
@@ -64,7 +65,8 @@ class: center, middle
 * You should learn how to make correct parallel code 
 * in a real language, used in practice
 * You should learn how to make fast parallel code
-* and measure whether one solution is faster than another * and understand why
+* and measure whether one solution is faster than another 
+* and understand why
 ---
 
 # Course contents
@@ -97,7 +99,13 @@ class: center, middle
 * Exercise hand-in: Thursday morning by 7
 * On LearnIT, as a link to your itu github with solutions
 
-### See the google sheet linked from this weeks readme file
+### See the google sheet linked from this weeks readme file for timeslots
+--
+
+### Help during before feedback
+* Group and team members - email in the sheet
+* We need a vote - discussion on LearnIT forum or as github issues?
+
 ---
 
 # Course information online
@@ -233,7 +241,7 @@ Press Enter to get the current value:
 <img src="img/sequenceDia1.jpg" alt="drawing" style="width:80%;"/>
 
 ---
-# Break
+# Break until 8:45
 ---
 
 # How to do concurrency I - (*all* corners cut!)
@@ -596,7 +604,7 @@ public class LambdaFail {
 	private static IntSupplier incrementer(int start){
 		return ()->start++;
 	}
-}
+} // LambdaFail.java
 ```
 --
 * If java allowed this, `mylambda` would in effect be able to refer to a parameter of a returned method (the `start` parameter). 

@@ -13,9 +13,9 @@ Schedule for feedback is in [this google sheet](https://docs.google.com/spreadsh
 
 ### Lecture
 [Zoom lecture at Friday 8:00 to 10:00](https://itucph.zoom.us/j/63716236015)
-[Preliminary slides](), will be updated after lecuture.
+[Preliminary slides](lexture_02_slides.pdf).
 
 ### Lecture recordings
-Will be available after the lecture Friday
+There are two recordings: [part a](https://use.vg/tsNyOZkyYx5I), [part b](https://use.vg/sv6kJxhdtVcn)
 
 

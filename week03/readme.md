@@ -3,11 +3,17 @@ This week we will look at how you design datastructures which should be thread-s
 
 
 ### Readings
-Goetz 4 & 5.
+Goetz 4 & 5.<br>
+In particular, the cache example at the end of chapter 5 is worth to study. It summarize most of the important aspects of the two chapters, and give a nice illustration of how to achieve a high level of parallelism.
+<br>
+
+
+If you are rusty on invariants and pre/post conditions, and how that relates to exceptions I suggest the [original paper by Bertand Meyer](DesignByContract_Original.pdf). While no major language addopted his syntax, I have found his way of thinking about software development very useful.
+
 
 ### Exercises for feedback Thursday Sep 17 (with a few on Tuesday Sep 15)
 
-Exercises not done yet
+[Exercises 03](exercises_03.pdf)
 
 
 

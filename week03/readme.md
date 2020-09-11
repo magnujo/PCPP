@@ -20,8 +20,9 @@ If you are rusty on invariants and pre/post conditions, and how that relates to 
 ### Lecture Friday Sep 11th
 [Zoom lecture at Friday 8:00 to 10:00](https://itucph.zoom.us/j/63716236015)
 
-[Preliminary slides](lecture03_slides.pdf)
+[Final slides](lecture03_slides.pdf)
 
 ### Lecture recordings
-Will be available after the lecture
+
+Zoom recording [PartA](https://use.vg/F5UPfer0Pk7q), [PartB](https://use.vg/Zg6LGzX7QktW)
 

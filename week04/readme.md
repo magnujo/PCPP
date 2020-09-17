@@ -12,7 +12,7 @@ We will also touch on the statistics behind benchmarking, floating point represe
 
 ### Exercises for feedback
 
-See [exercises04.pdf](exercises04.pdf Not yet available.
+See [exercises04.pdf](exercises04.pdf)
 
 ### Slides
 [Preliminary slides](lexture_04_slides.pdf), not yet available.

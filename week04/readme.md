@@ -15,7 +15,7 @@ We will also touch on the statistics behind benchmarking, floating point represe
 See [exercises04.pdf](exercises04.pdf)
 
 ### Slides
-[Preliminary slides](lexture_04_slides.pdf), not yet available.
+[Preliminary slides](https://github.itu.dk/kasper/PCPP-Public/blob/Fall20/week04/lecture04_slides.pdf).
 
 ### Lecture recordings
 Will be available after the lecture Friday

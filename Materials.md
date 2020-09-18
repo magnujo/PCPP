@@ -8,6 +8,12 @@ The list of reading materials will be updated throughout the semester. However, 
 
 - Yes, the book is old, but unfortunately still the best book around.
 
+We will be reading most of the book at some point in the semester, and mostly in order. 
+
+## Other mandatory material
+
+Will be announced for the individual weeks.
+
 ------
 
 ### Resources

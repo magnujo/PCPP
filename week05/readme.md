@@ -15,14 +15,14 @@ On .Net the corresponding thing is [Task Parallel Library (TPL)](https://docs.mi
 
 ### Exercises for feedback Thursday Oct 8th (with a few on Tuesday Oct 6th)
 
-* Exercises not done yet
+* [Exercises](exercise05.pdf)
 
 
 
 ### Lecture Friday Sep 11th
 * [Zoom lecture at Friday 8:00 to 10:00](https://itucph.zoom.us/j/63716236015)
-* Slides not done yet.
+* [Slides](lecture05_slides.pdf)
 
 ### Lecture recordings
-Will be available after the lecture
+[PartA](https://use.vg/UjIlHTSfW0J5), [PartB](https://use.vg/BtNOS2jJu65j)
 

@@ -8,17 +8,18 @@ On .Net the corresponding thing is [Task Parallel Library (TPL)](https://docs.mi
 
 ### Readings
 * Goetz 6, 8-8.2 & 10-10.1.2.
+* [Guide to Work Stealing in Java](https://www.baeldung.com/java-work-stealing)
 
 * Not mandatory, but interesting: Goetz chap. 7.<br>
   Chapter 8.3 and forward becomes very technical in its treatment of parameters of threadpools and can be skipped.
 
 ### Exercises for feedback Thursday Oct 8th (with a few on Tuesday Oct 6th)
 
-* [Exercises](exercise05.pdf)
+* Exercises not done yet
 
 
 
-### Lecture Friday Sep 25th
+### Lecture Friday Sep 11th
 * [Zoom lecture at Friday 8:00 to 10:00](https://itucph.zoom.us/j/63716236015)
 * Slides not done yet.
 

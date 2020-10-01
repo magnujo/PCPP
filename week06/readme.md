@@ -9,7 +9,7 @@ After this week you will be able to use parallel streams, and know how they are 
 
 ### Exercises for feedback Thursday Oct 8th (with a few on Tuesday Oct 6th)
 
-* Exercises not done yet
+* [Exercises](exercises06.pdf)
 
 ### Lecture Friday Octoberth
 * [Zoom lecture at Friday 8:00 to 10:00](https://itucph.zoom.us/j/63716236015)

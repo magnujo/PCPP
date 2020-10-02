@@ -13,8 +13,8 @@ After this week you will be able to use parallel streams, and know how they are 
 
 ### Lecture Friday Octoberth
 * [Zoom lecture at Friday 8:00 to 10:00](https://itucph.zoom.us/j/63716236015)
-* Slides not done yet.
+* [Slides](Lecture06.pdf)
 
 ### Lecture recordings
-Will be available after the lecture
+Lecture recordings [part a](https://use.vg/AuUuDKvWQXk8) & [part b](https://use.vg/2wbUTJdGCayT)
 

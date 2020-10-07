@@ -12,11 +12,11 @@ The read-write locks in Goetz 13.5 can be suplemented with a reading of javadoc 
 
 ### Exercises for feedback Thursday October 22nd (with a few on Tuesday Oct 20th)
 
-* Exercises not done yet
+* [Exercises](exercises07.pdf)
 
 ### Lecture Friday October 9th.
 * [Zoom lecture at Friday 8:00 to 10:00](https://itucph.zoom.us/j/63716236015)
-* Slides not done yet.
+* [Preliminary Slides](lecture06_slides.pdf)
 
 ### Lecture recordings
 Will be available after the lecture

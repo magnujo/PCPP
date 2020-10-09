@@ -16,8 +16,7 @@ The read-write locks in Goetz 13.5 can be suplemented with a reading of javadoc 
 
 ### Lecture Friday October 9th.
 * [Zoom lecture at Friday 8:00 to 10:00](https://itucph.zoom.us/j/63716236015)
-* [Preliminary Slides](lecture06_slides.pdf)
+* [Final Slides](lecture06_slides.pdf)
 
 ### Lecture recordings
-Will be available after the lecture
-
+Lecture recordings [part a](https://use.vg/9iEYBN1smz53) & [part b](https://use.vg/PysfN31QoXCU)

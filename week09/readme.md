@@ -20,6 +20,7 @@ These two tutorials are a nice introduction to RxJava, they are oriented to Java
 the sections specifically  discussing Android and Android studio:
 
 [Introduction](https://code.tutsplus.com/tutorials/getting-started-with-rxjava-20-for-android--cms-28345)
+
 [Reactive Programming Operators](https://code.tutsplus.com/tutorials/reactive-programming-operators-in-rxjava-20--cms-28396?_ga=2.197046314.723429276.1502526034-1015877821.1497434847)
 
 This tutorial explains how to set up RxJava and gives a number of "toy" examples

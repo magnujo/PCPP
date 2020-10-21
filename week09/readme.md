@@ -31,7 +31,6 @@ This tutorial explains how to set up RxJava and gives a number of "toy" examples
 ### Exercises for feedback
 
 See [exercises09.pdf](exercises09.pdf)
-(not yet ready)
 
 ### Slides
 [Preliminary slides](https://github.itu.dk/kasper/PCPP-Public/blob/Fall20/week09/lecture09_slides.pdf).

@@ -33,7 +33,7 @@ This tutorial explains how to set up RxJava and gives a number of "toy" examples
 See [exercises09.pdf](exercises09.pdf)
 
 ### Slides
-[Preliminary slides](https://github.itu.dk/kasper/PCPP-Public/blob/Fall20/week09/lecture09_slides.pdf).
+[Final slides](https://github.itu.dk/kasper/PCPP-Public/blob/Fall20/week09/lecture09_slides.pdf).
 
 ### Lecture recordings
-Will be available after the Friday lecture
+Available on LearnIT  (under week9 Recording of lecture)

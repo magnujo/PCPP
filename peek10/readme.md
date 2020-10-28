@@ -25,6 +25,7 @@ If you want see how a lot of developers view different technologies and programm
 ### Readings
 * Online experimentation: [Learn Kotlin by Example](https://play.kotlinlang.org/byExample/overview)
 * [Kotlin Coroutines](https://github.com/Kotlin/KEEP/blob/master/proposals/coroutines.md)
+    * The [documentation of coroutines](https://kotlinlang.org/docs/reference/coroutines/coroutines-guide.html) is helpful as well.
 * There is [an online playground](https://play.kotlinlang.org) where you can try out small examples without installing the compiler or an IDE.
 
 ### Exercises for feedback 

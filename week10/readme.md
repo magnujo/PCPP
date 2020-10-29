@@ -30,11 +30,11 @@ If you want see how a lot of developers view different technologies and programm
 
 ### Exercises for feedback 
 
-* To be done
+* In [exercises10.pdf](exercises10.pdf)
 
 ### Lecture Friday Octoberth
 * [Zoom lecture at Friday 8:00 to 10:00](https://itucph.zoom.us/j/63716236015)
-* [Slides to be done]
+* [Preliminary slides](lecture10_slides.pdf)
 
 ### Lecture recordings
 Lecture recordings - available soon after lecture

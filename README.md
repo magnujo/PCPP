@@ -1,35 +1,36 @@
-## Practical Concurrent and Parallel Programming 2020
+# 11 Coroutines II
 
-### Lecture plan
-Lesson|Week #|Lecture|Topic|Teacher
----|---|---|---|---
-1|35|Aug 28|Race conditions & Locking|Kasper
-2|36|Sep 4|Visibility & initialization|Kasper
-3|37|Sep 11|Monitors (old lecture 2)|Kasper
-4|38|Sep 18|Performance measurements|Jørgen
-5|39|Sep 25|Executor framework|Kasper
-6|40|Oct 2|Streams|Kasper
-7|41|Oct 9|Performance and scaleability|Kasper
-8|42|Oct 16|Fall break|
-9|43|Oct 23|React|Jørgen
-10|44|Oct 30|Kotlin Coroutines 1|Kasper
-11|45|Nov 6|Kotlin Coroutines 2|Kasper
-12|46|Nov 13|Testing|Kasper
-13|47|Nov 20|Building Synchronizers (Goetz 13+14)|Kasper
-14|48|Nov 27|Non-blocking synchronization (Goetz 15)|Jørgen
-15|49|Dec 4|Exam prep|Kasper
-Performance and scaleability
-### (PCPP) (KSPRCPP1KU) E2020
+Topics we will look at this lesson includes
 
-In this MSc course, you learn how to write correct and efficient concurrent and parallel software, primarily using Java, on standard shared-memory multicore hardware. The course covers basic mechanisms such as threads, locks and shared memory as well as more advanced mechanisms such as parallel streams for bulk data, and lock-free data structures with compare-and-swap. It covers concepts such as atomicity, safety, liveness and deadlock. It covers how to measure and understand the performance and scalability of parallel programs. It covers methods to find bugs in concurrent programs. Also, we will take a look at some of the concurrency mechanisms proposed for other programming languages than Java.
+* Schedulers
+* Scaleability
+* Coroutine dispatchers
+* Channels
 
-For exercises and more information, see the [course LearnIT site ](https://learnit.itu.dk/course/view.php?id=3019527)(restricted access). For formal rules, see the [official course description](https://learnit.itu.dk/local/coursebase/view.php?ciid=552).
 
-The course is taught by Kasper Østerbye and Jørgen Staunstrup and designed together with Thomas Dybdahl Ahle, Peter Sestoft, Riko Jacob and Claus Brabrand at the IT University of Copenhagen. Teaching assistants are `to be done`.
+### Readings
+* The sections 
+[Basics](https://kotlinlang.org/docs/reference/coroutines/basics.html),
+[Composing Suspending Functions](https://kotlinlang.org/docs/reference/coroutines/composing-suspending-functions.html),
+[Coroutine Context and Dispatchers](https://kotlinlang.org/docs/reference/coroutines/coroutine-context-and-dispatchers.html),
+[Channels](https://kotlinlang.org/docs/reference/coroutines/channels.html),
+[Shared Mutable State and Concurrency](https://kotlinlang.org/docs/reference/coroutines/shared-mutable-state-and-concurrency.html) from the [kotlin guide](https://kotlinlang.org/docs/reference/coroutines/coroutines-guide.html)
 
-### [Materials](Materials.md)
 
-### Weekly assignments, slides, example code etc.
+* Online experimentation: [Learn Kotlin by Example](https://play.kotlinlang.org/byExample/overview)
+* [Kotlin Coroutines](https://github.com/Kotlin/KEEP/blob/master/proposals/coroutines.md)
 
-Each week we will update this repository with the material used in this week. 
+
+* There is [an online playground](https://play.kotlinlang.org) where you can try out small examples without installing the compiler or an IDE.
+
+### Exercises for feedback 
+
+* [execises11.pdf](execises11.pdf)
+
+### Lecture Friday November 6th
+* [Zoom lecture at Friday 8:00 to 10:00](https://itucph.zoom.us/j/63716236015)
+* [Preliminary slides](lecture11_slides.pdf)
+
+### Lecture recordings
+Lecture recordings - available soon after lecture
 

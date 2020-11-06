@@ -15,10 +15,10 @@ Lesson|Week #|Lecture|Topic|Teacher
 10|44|Oct 30|Kotlin Coroutines 1|Kasper
 11|45|Nov 6|Kotlin Coroutines 2|Kasper
 12|46|Nov 13|Testing|Kasper
-13|47|Nov 20|Building Synchronizers (Goetz 13+14)|Kasper
-14|48|Nov 27|Non-blocking synchronization (Goetz 15)|Jørgen
-15|49|Dec 4|Exam prep|Kasper
-Performance and scaleability
+13|47|Nov 20|Non-blocking synchronization |Jørgen
+14|48|Nov 27|Exam prep|Jørgen & Kasper
+15|49|Dec 4|Q&A|Jørgen & Kasper
+
 ### (PCPP) (KSPRCPP1KU) E2020
 
 In this MSc course, you learn how to write correct and efficient concurrent and parallel software, primarily using Java, on standard shared-memory multicore hardware. The course covers basic mechanisms such as threads, locks and shared memory as well as more advanced mechanisms such as parallel streams for bulk data, and lock-free data structures with compare-and-swap. It covers concepts such as atomicity, safety, liveness and deadlock. It covers how to measure and understand the performance and scalability of parallel programs. It covers methods to find bugs in concurrent programs. Also, we will take a look at some of the concurrency mechanisms proposed for other programming languages than Java.

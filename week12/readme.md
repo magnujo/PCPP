@@ -8,7 +8,7 @@ We will look at both correctness and performance testing for concurrent programs
 
 ### Exercises for feedback 
 
-* to be done
+* [exercise12.pdf](exercise12.pdf)
 
 ### Lecture Friday November 13th
 

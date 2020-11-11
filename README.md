@@ -15,8 +15,8 @@ Lesson|Week #|Lecture|Topic|Teacher
 10|44|Oct 30|Kotlin Coroutines 1|Kasper
 11|45|Nov 6|Kotlin Coroutines 2|Kasper
 12|46|Nov 13|Testing|Kasper
-13|47|Nov 20|Non-blocking synchronization |Jørgen
-14|48|Nov 27|Exam prep|Jørgen & Kasper
+13|47|Nov 20|Lock free coordination |Jørgen
+14|48|Nov 27|Exam prep and course evaluation |Jørgen & Kasper
 15|49|Dec 4|Q&A|Jørgen & Kasper
 
 ### (PCPP) (KSPRCPP1KU) E2020

@@ -12,7 +12,7 @@ We will look at both correctness and performance testing for concurrent programs
 
 ### Lecture Friday November 13th
 
-* slides to be done
+* [Slides preliminary](lecture12_slides.pdf)
 
 ### Lecture recordings
 Lecture recordings - available soon after lecture

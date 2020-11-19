@@ -6,6 +6,10 @@ The lecture on Friday Nov 27 is devoted to info about the examination.
 There will be no exercises (and therefore no feedback session on Dec 3). Instead, 
 please do the course evaluation (opened on Friday Nov 27).
 
+### Old exam questions
+The exam questions from earlier years are in the "old_exams" folder. Several of the earlier exams came with a code supplement. Exam and code are named after the semester of the class.
+
+Notice that the mandatory readings have varried a bit over the years, in particular RxJava and kotlin was not part of the class earlier, whereas transactional memory and akka was. Channels and sequential processes were also done in other languages.
 
 
 ### Readings
@@ -23,6 +27,8 @@ at the last lecture on Friday Dec 4.
 ### Course evaluation
 Please make sure that you complete the course evaluation (deadline Thursday Dec 3rd). 
 A summary of the results will be presented at the last lecture on Friday Dec 4.
+
+
 
 ### Slides
 Not yet ready

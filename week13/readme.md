@@ -32,7 +32,7 @@ It is **not** mandatory reading, but give it a shot anyway.
 See: [exercises13.pdf](exercises13.pdf)
 
 ### Slides
-A preliminary version is here: [lecture13.pdf](lecture13Preliminary.pdf)
+Final version is here: [lecture13.pdf](lecture13.pdf)
 
 ### Lecture recordings
-Available on LearnIT  after the lecture on Nov 20th.
+Available here: [Recording] (https://learnit.itu.dk/mod/folder/view.php?id=128726)

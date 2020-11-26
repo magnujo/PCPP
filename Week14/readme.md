@@ -14,7 +14,7 @@ Notice that the mandatory readings have varried a bit over the years, in particu
 
 ### Readings
 There is no new material to read, but you are encouraged to study the 
-[mandatory reading for the course](mandatoryReadingPCPP.pdf) - not yet available.
+[mandatory reading for the course](mandatoryReadingPCPP.md) - not yet available.
 
 Questions to the mandatory reading will be adressed at the last lecture on Friday Dec 4.
 
@@ -26,7 +26,7 @@ at the last lecture on Friday Dec 4.
 
 ### Course evaluation
 Please make sure that you complete the course evaluation (deadline Thursday Dec 3rd). 
-A summary of the results will be presented at the last lecture on Friday Dec 4.
+A summary of the results will be presented at the Question and Answer session on Friday Dec 4.
 
 
 
@@ -34,4 +34,4 @@ A summary of the results will be presented at the last lecture on Friday Dec 4.
 Not yet ready
 
 ### Lecture recordings
-Available on LearnIT  after the lecture on Nov 27th.
+Available after the lecture on Nov 27th.

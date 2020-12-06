@@ -11,7 +11,11 @@ public class TestCountPrimesThreads {
     SystemInfo();
     final int range = 100_000;
     //Mark6("countSequential", i -> countSequential(range));
-    Mark6("countParallel", i -> countParallelN(range, 1));
+    for (int j = 1; j < 16; j++) {
+      final int c = j;
+      System.out.println("Testing: " + c + " threads");
+      Mark7("countParallel", i -> countParallelN(range, c));
+    }
     /*Mark7("countSequential", i -> countSequential(range));
     for (int c=1; c<=32; c++) {
       final int threadCount = c;

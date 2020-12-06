@@ -3,16 +3,80 @@
 
 import java.util.function.IntToDoubleFunction;
 
+
+class volTest {
+  private volatile int vol = 0;
+
+  public int vinc(){
+    vol++;
+    return vol;
+  }
+
+}
+
+class nonVolTest {
+  private int nonvol = 0;
+
+  public int inc(){
+    nonvol++;
+    return nonvol;
+  }
+
+}
+
+
+
+
 class Benchmark {
+  private static int nonvol = 0;
+  private static volatile int vol = 0;
+
   public static void main(String[] args) {
     SystemInfo();
     //Mark0();
     //Mark1();
-    // Mark2();
-    // Mark3();
+     //Mark2();
+     //Mark3();
     // Mark4();
     // Mark5();
-     Mark6("multiply", Benchmark::multiply);
+    Object obj = new Object();
+    /*Mark6("Uncontended lock", i -> {
+      synchronized (obj){return i; }
+         });*/
+
+    /*Mark6("volatile", i -> {
+      for (int j = 0; j < 1000; j++) {
+        vol++;
+      }
+      return vol;
+    });
+
+    Mark6("nonvol", i -> {
+      for (int j = 0; j < 1000; j++) {
+        nonvol++;
+      }
+      return nonvol;
+    });*/
+
+
+    Mark6("volatile", i -> {
+      double temp = 0;
+      for (int j = 0; j < 1000; j++) {
+        volTest volTest = new volTest();
+        temp = volTest.vinc();
+      }
+      return temp;
+    });
+
+    Mark6("nonvol", i -> {
+      double temp = 0;
+      for (int j = 0; j < 1000; j++) {
+        nonVolTest nonvoltest = new nonVolTest();
+        temp = nonvoltest.inc();
+      }
+      return temp;
+    });
+    // Mark6("multiply", Benchmark::multiply);
     // Mark7("multiply", Benchmark::multiply);
     // MathFunctionBenchmarks();
     // final java.util.Random rnd = new java.util.Random();
@@ -27,6 +91,8 @@ class Benchmark {
   }
 
   // ========== Example functions and benchmarks ==========
+
+
 
   private static double multiply(int i) {
     double x = 1.1 * (double)(i & 0xFF);

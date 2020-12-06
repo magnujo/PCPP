@@ -73,8 +73,9 @@ public class TestTimeThreads {
       st = sst = 0.0;
       for (int j=0; j<n; j++) {
         Timer t = new Timer();
-        for (int i=0; i<count; i++) 
-          dummy += f.applyAsDouble(i);
+        for (int i=0; i<count; i++){
+            dummy += f.applyAsDouble(i);
+        }
         runningTime = t.check();
         double time = runningTime * 1e9 / count; // nanoseconds
         st += time; 

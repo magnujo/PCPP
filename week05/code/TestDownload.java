@@ -5,6 +5,8 @@ import java.net.URL;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
+import java.util.*;
+import java.util.concurrent.*;
 
 public class TestDownload {
 
@@ -14,14 +16,47 @@ public class TestDownload {
     "http://www.vg.no", "http://www.tv2.dk", "http://www.google.com",
     "http://www.ing.dk", "http://www.dtu.dk", "http://www.eb.dk", 
     "http://www.nytimes.com", "http://www.guardian.co.uk", "http://www.lemonde.fr",   
-    "http://www.welt.de", "http://www.dn.se", "http://www.heise.de", "http://www.wsj.com", 
+    "http://www.welt.de", "http://www.dn.se", "http://www.heise.de",
     "http://www.bbc.co.uk", "http://www.dsb.dk", "http://www.bmw.com", "https://www.cia.gov" 
   };
 
-  public static void main(String[] args) throws IOException {
-    String url = "https://www.wikipedia.org/";
-    String page = getPage(url, 10);
-    System.out.printf("%-30s%n%s%n", url, page);
+  public static void main(String[] args) throws IOException, InterruptedException {
+    //String page = getPage(url, 10);
+    Map<String, String> map = getPagesParallel(urls, 200);
+    System.out.println(map);
+
+
+    //System.out.printf("%-30s%n%s%n", url, page);
+  }
+
+  public static Map<String, String> getPagesParallel (String[] urls, int maxLines) throws IOException, InterruptedException {
+    ExecutorService executor = Executors.newFixedThreadPool(2);
+    Map<String, String> map = new HashMap<>();
+    ArrayList<Callable<String>> tasks = new ArrayList<>();
+
+    for (String url: urls) {
+      tasks.add(() -> {
+        final String u = url;
+        final String page = getPage(url, maxLines);
+        map.put(u, page);
+        return "bla";
+      });
+    }
+    executor.invokeAll(tasks);
+    executor.shutdown();
+    executor.awaitTermination(1, TimeUnit.DAYS);
+    return map;
+  }
+
+  public static Map<String, String> getPages (String[] urls, int maxLines) throws IOException {
+    Map<String, String> map = new HashMap<>();
+
+    for (String url: urls) {
+      final String page = getPage(url, maxLines);
+      map.put(url, page);
+    }
+
+    return map;
   }
 
   public static String getPage(String url, int maxLines) throws IOException {

@@ -44,7 +44,7 @@ class Benchmark {
       synchronized (obj){return i; }
          });*/
 
-    /*Mark6("volatile", i -> {
+    Mark6("volatile", i -> {
       for (int j = 0; j < 1000; j++) {
         vol++;
       }
@@ -56,7 +56,7 @@ class Benchmark {
         nonvol++;
       }
       return nonvol;
-    });*/
+    });
 
 
     Mark6("volatile", i -> {

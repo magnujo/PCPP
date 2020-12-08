@@ -6,19 +6,79 @@
 
 import java.util.Random;
 
+import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.CyclicBarrier;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicIntegerArray;
+import java.util.function.Function;
 import java.util.function.IntToDoubleFunction;
 
 public class TestStripedMap {
-  public static void main(String[] args) {
-    StripedMap<Integer, String> map = new StripedMap<>(25, 5);
+  public static void main(String[] args) throws BrokenBarrierException, InterruptedException {
+    for (int i = 0; i < 10; i++) {
+      testConcurrency(new StripedMap<>(77, 7));
+    }
+
+
 
     //SystemInfo();
-    testAllMaps();   // Must be run with: java -ea TestStripedMap
+  //  testAllMaps();   // Must be run with: java -ea TestStripedMap
    // exerciseAllMaps();
     // timeAllMaps();
+  }
+
+
+  private static void testConcurrency(OurMap<Integer, String> map) throws BrokenBarrierException, InterruptedException {
+    final int numOfCores = 4;
+    final int numOfThreads = 16;
+   // WrapConcurrentHashMap<Integer, String> map = new WrapConcurrentHashMap<>();
+    final int reps = 1000000;
+    final CyclicBarrier barrier = new CyclicBarrier(numOfThreads+1);
+    final int[] sumArray = new int[numOfThreads*2];
+    final AtomicInteger sumAtom = new AtomicInteger(0);
+    final int ranBound = 99;
+
+    Runnable task = () -> {
+      int sum = 0;
+      final Random random = new Random();
+
+      try {
+
+        barrier.await();
+
+        for (int i = 0; i < reps; i++) {
+          map.containsKey(random.nextInt(ranBound));
+
+          final Object p = map.put(random.nextInt(ranBound), "a");
+          if(p==null) sum++;
+
+          final Object pif = map.putIfAbsent(random.nextInt(ranBound), "a");
+          if (pif==null) sum++;
+
+          final Object re = map.remove(random.nextInt(ranBound));
+          if (re!=null) sum--;
+        }
+
+        sumAtom.getAndAdd(sum);
+        barrier.await();
+      } catch (Exception e) {}
+    };
+
+    for (int i = 0; i < numOfThreads; i++) {
+      new Thread(task).start();
+    }
+
+    barrier.await();
+    barrier.await();
+
+    int finalSum = sumAtom.get();
+    /*int finalSum = 0;
+    for (int i = 0; i < sumArray.length; i++) {
+      finalSum = finalSum + sumArray[i];
+    }*/
+
+    System.out.println("Multiple thread test: " + (map.size()==finalSum ? "SUCCESS" : "FAILURE"));
   }
 
   private static void timeAllMaps() {
@@ -483,7 +543,6 @@ class StripedMap<K,V> implements OurMap<K,V> {
 
   // Put v at key k, or update if already present
   public V put(K k, V v) {
-
     final int h = getHash(k), stripe = h % lockCount;
     if (sizes[stripe] > buckets.length / lockCount ){
       reallocateBuckets(); // If the current stripe size
@@ -506,8 +565,6 @@ class StripedMap<K,V> implements OurMap<K,V> {
       }
     }
   }
-
-
   // Put v at key k only if absent
   public V putIfAbsent(K k, V v) {
     final int h = getHash(k), stripe = h % lockCount;
@@ -527,6 +584,11 @@ class StripedMap<K,V> implements OurMap<K,V> {
       else return node.v;
     }
   }
+
+
+
+
+
 
   // Remove and return the value at key k if any, else return null
   public V remove(K k) {
@@ -585,8 +647,8 @@ class StripedMap<K,V> implements OurMap<K,V> {
   // lockCount == s will continue to belong to stripe s.  Hence the
   // sizes array need not be recomputed.
 
-  public synchronized void reallocateBuckets() {
-    lockAllAndThen(() -> {
+  public void reallocateBuckets() {
+    lockAllAndThen(()-> {
       final ItemNode<K,V>[] newBuckets = makeBuckets(2 * buckets.length);
       for (int hash=0; hash<buckets.length; hash++) {
         ItemNode<K,V> node = buckets[hash];
@@ -600,6 +662,8 @@ class StripedMap<K,V> implements OurMap<K,V> {
       }
       buckets = newBuckets;
     });
+
+
   }
 
   // Lock all stripes, perform the action, then unlock all stripes
@@ -764,7 +828,7 @@ class StripedWriteMap<K,V> implements OurMap<K,V> {
   // with 16 threads and a largish buckets table, size > 10,000.
 
   public void reallocateBuckets(final ItemNode<K,V>[] oldBuckets) {
-    lockAllAndThen(() -> { 
+    lockAllAndThen(() -> {
         final ItemNode<K,V>[] bs = buckets;
         if (oldBuckets == bs) {
           // System.out.printf("Reallocating from %d buckets%n", bs.length);

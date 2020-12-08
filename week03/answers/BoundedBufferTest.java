@@ -77,12 +77,5 @@ public class BoundedBufferTest{
         catch (final InterruptedException exn) {
             System.out.println("Some thread was interrupted");
         }
-
-
-
-
-
-
-
     }
 }

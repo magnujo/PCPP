@@ -16,11 +16,10 @@ public class StopwatchRx {
   private static stopwatchUI myUI;
  
   //Observable simulating clock ticking every second
-    final static Observable<Integer> timer
-      = Observable.create(new ObservableOnSubscribe<Integer>() {
+    final static Observable<Integer> timer = Observable.create(new ObservableOnSubscribe<Integer>() {
         @Override
         public void subscribe(ObservableEmitter<Integer> e) throws Exception {
-          Thread t= new Thread() {
+          Thread t = new Thread() {
             @Override
             public void run() {
               try {
@@ -59,7 +58,7 @@ public class StopwatchRx {
  
     //TO DO
     //Insert code using timer and display to make a working version of the Stopwatch
-
+    timer.subscribe(display);
     f.setLayout(null);  
 		f.setVisible(true);   
 	}

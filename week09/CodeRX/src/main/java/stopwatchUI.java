@@ -4,7 +4,7 @@ import java.awt.event.ActionListener;
 import java.util.Locale;
 
 class stopwatchUI {
-		final private String allzero = "0:00:00";
+		final private String allzero = "0:00:0";
 		private int lx;
 		private static JFrame lf;
 		private SecCounter lC;
@@ -17,10 +17,10 @@ class stopwatchUI {
 		public void updateTime(){
       if ( lC.incr() ) {
         int seconds= lC.seconds;
-        int hours= seconds/3600;
-        int minutes= (seconds%3600)/60;
-        int secs= seconds%60;
-        String time= String.format(Locale.getDefault(),	"%d:%02d:%02d", hours, minutes, secs);
+        int hours= seconds/60/10;
+        int minutes= seconds/10%60;
+        int secs= seconds%10;
+        String time= String.format(Locale.getDefault(),	"%d:%02d:%d", hours, minutes, secs);
         tf.setText(time);
       }
 		};

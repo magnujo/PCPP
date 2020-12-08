@@ -9,15 +9,21 @@ Modified to Java, October 2020 by Jørgen Staunstrup, ITU, jst@itu.dk */
 public class Stopwatch {
 
   private static stopwatchUI myUI;
-	
+  private static stopwatchUI myUI2;
+
+
 	public static void main(String[] args) { 
-		JFrame f=new JFrame("Stopwatch");  	
-		f.setBounds(0, 0, 220, 220); 
-    myUI= new stopwatchUI(0, f);
- 
-    f.setLayout(null);  
-		f.setVisible(true); 
-		
+		JFrame f=new JFrame("Stopwatch");
+		int n = 5;
+		f.setBounds(0, 0, 220*n, 220);
+    	//myUI= new stopwatchUI(0, f);
+   		 //myUI2 = new stopwatchUI(220, f);
+		for (int i = 0; i < n; i++) {
+			new stopwatchUI(i*220, f);
+		}
+
+		f.setLayout(null);
+		f.setVisible(true);
 		Thread t= new Thread() {
 			private int seconds= 0;
 			// Background Thread simulation a clock ticking every 1 seconde
@@ -26,8 +32,7 @@ public class Stopwatch {
 				int temp= 0;
 				try {
 					while ( true ) {
-						TimeUnit.SECONDS.sleep(1);
-						myUI.updateTime();
+						TimeUnit.MILLISECONDS.sleep(100);
 					}
 				} catch (InterruptedException e) {
 					System.out.println(e.toString());
@@ -36,4 +41,12 @@ public class Stopwatch {
 		}; 
     t.start();
 	}
+
+
+
+
 }
+
+
+
+

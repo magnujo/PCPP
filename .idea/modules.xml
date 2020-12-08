@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/CodeRX.iml" filepath="$PROJECT_DIR$/.idea/modules/CodeRX.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/CodeRX.main.iml" filepath="$PROJECT_DIR$/.idea/modules/CodeRX.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/CodeRX.test.iml" filepath="$PROJECT_DIR$/.idea/modules/CodeRX.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Examtraining.iml" filepath="$PROJECT_DIR$/.idea/Examtraining.iml" />
       <module fileurl="file://$PROJECT_DIR$/week01/week01.iml" filepath="$PROJECT_DIR$/week01/week01.iml" />
       <module fileurl="file://$PROJECT_DIR$/week02/week02.iml" filepath="$PROJECT_DIR$/week02/week02.iml" />

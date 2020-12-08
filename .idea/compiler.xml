@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="CodeRX" target="11" />
+      <module name="CodeRX.main" target="11" />
+      <module name="CodeRX.test" target="11" />
+      <module name="Examtraining" target="11" />
+      <module name="Examtraining.main" target="11" />
+      <module name="Examtraining.test" target="11" />
+      <module name="rxjavabasics" target="11" />
+      <module name="rxjavabasics.main" target="11" />
+      <module name="rxjavabasics.test" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

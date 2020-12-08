@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id="CodeRX:test" external.linked.project.path="$MODULE_DIR$/../../week09/CodeRX" external.root.project.path="$MODULE_DIR$/../../week09/CodeRX" external.system.id="GRADLE" external.system.module.group="org.example" external.system.module.type="sourceSet" external.system.module.version="1.0-SNAPSHOT" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <output-test url="file://$MODULE_DIR$/../../week09/CodeRX/build/classes/java/test" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../week09/CodeRX/src/test">
+      <sourceFolder url="file://$MODULE_DIR$/../../week09/CodeRX/src/test/groovy" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../week09/CodeRX/src/test/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../week09/CodeRX/src/test/resources" type="java-test-resource" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="CodeRX.main" />
+    <orderEntry type="library" name="Gradle: org.codehaus.groovy:groovy-all:2.3.11" level="project" />
+    <orderEntry type="library" name="Gradle: io.reactivex.rxjava2:rxjava:2.2.20" level="project" />
+    <orderEntry type="library" name="Gradle: junit:junit:4.12" level="project" />
+    <orderEntry type="library" name="Gradle: org.reactivestreams:reactive-streams:1.0.3" level="project" />
+    <orderEntry type="library" name="Gradle: org.hamcrest:hamcrest-core:1.3" level="project" />
+  </component>
+  <component name="TestModuleProperties" production-module="CodeRX.main" />
+</module>
